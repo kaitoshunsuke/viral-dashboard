@@ -1,0 +1,4 @@
+app/.env
+app/cache.json
+app/__pycache__/
+*.pyc
