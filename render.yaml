@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: viral-dashboard
+    runtime: python
+    buildCommand: pip install -r app/requirements.txt
+    startCommand: python app/app.py
+    envVars:
+      - key: YOUTUBE_API_KEY
+        sync: false
