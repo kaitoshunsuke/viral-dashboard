@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 260px; font-family: 'Inter', sans-serif; background: #0f2334; color: #cfdbe6; }
+  .header { padding: 16px 18px 12px; border-bottom: 1px solid #1e3a50; }
+  .logo { font-size: 10px; letter-spacing: 0.3em; font-weight: 700; color: #cfdbe6; }
+  .sub { font-size: 10px; color: #50687c; letter-spacing: 0.1em; margin-top: 2px; }
+  .content { padding: 16px 18px; }
+  .url-display { font-size: 11px; color: #7990a5; background: #0a1a28; border: 1px solid #1e3a50; border-radius: 3px; padding: 8px 10px; margin-bottom: 12px; word-break: break-all; min-height: 36px; line-height: 1.5; }
+  .platform-badge { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; padding: 2px 7px; border-radius: 2px; margin-bottom: 10px; }
+  .platform-tiktok { background: #ff0050; color: white; }
+  .platform-instagram { background: #e1306c; color: white; }
+  .platform-youtube { background: #ff0000; color: white; }
+  .platform-other { background: #333; color: #999; }
+  .save-btn { width: 100%; padding: 10px; background: #cfdbe6; color: #0f2334; border: none; border-radius: 3px; font-size: 12px; font-weight: 700; letter-spacing: 0.05em; cursor: pointer; transition: opacity 0.15s; }
+  .save-btn:hover { opacity: 0.85; }
+  .save-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .save-btn.success { background: #2ecc71; color: white; }
+  .save-btn.error { background: #e74c3c; color: white; }
+  .status { font-size: 11px; color: #50687c; text-align: center; margin-top: 10px; min-height: 16px; }
+  .saved-list { margin-top: 14px; border-top: 1px solid #1e3a50; padding-top: 12px; }
+  .saved-title { font-size: 10px; letter-spacing: 0.1em; color: #50687c; margin-bottom: 8px; }
+  .saved-item { font-size: 11px; color: #7990a5; padding: 5px 0; border-bottom: 1px solid #0a1a28; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .saved-count { font-size: 10px; color: #cfdbe6; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="logo">PLATINUM</div>
+  <div class="sub">VIRAL TRACKER</div>
+</div>
+<div class="content">
+  <div id="platform-badge" class="platform-badge platform-other">OTHER</div>
+  <div id="url-display" class="url-display">読み込み中...</div>
+  <button id="save-btn" class="save-btn">ダッシュボードに保存</button>
+  <div id="status" class="status"></div>
+
+  <div class="saved-list">
+    <div class="saved-title">保存済み <span id="saved-count" class="saved-count">0</span> 件</div>
+    <div id="saved-items"></div>
+  </div>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

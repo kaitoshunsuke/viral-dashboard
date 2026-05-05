@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Viral Tracker - Save Video",
+  "version": "1.0",
+  "description": "TikTok/Instagram/YouTubeの動画をワンクリックでダッシュボードに保存",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://www.tiktok.com/*",
+    "https://www.instagram.com/*",
+    "https://www.youtube.com/*",
+    "http://localhost:5050/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icon.png"
+    }
+  }
+}
