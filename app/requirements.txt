@@ -1,4 +1,6 @@
 flask
+flask-cors
 requests
 apscheduler
 python-dotenv
+yt-dlp
